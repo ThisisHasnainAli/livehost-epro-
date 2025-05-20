@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Policy</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        #container1 {
+            max-width: 800px;
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .top-navbar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: white;
+  flex-wrap: wrap; 
+}
+
+
+.top-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+}
+
+.top-icons h3 {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+
+.other-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.other-links i {
+  font-size: 22px;
+  cursor: pointer;
+  color: black;
+}
+
+.other-links a {
+  text-decoration: none;
+}
+
+#btn-login,
+#btn-signup {
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#btn-login a,
+#btn-signup a {
+  text-decoration: none;
+  color: black;
+}
+
+#btn-login:hover {
+  background-color: #a87272;
+  color: white;
+}
+
+#btn-signup:hover {
+  background-color: #722f2f;
+  color: white;
+}
+
+
+.navbar {
+  background: rgb(177, 6, 6);
+
+}
+
+.navbar-brand img {
+  width: 160px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 18px;
+  
+}
+.fixed-top {
+  position: fixed;
+  top: 120px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.home-section {
+  padding-top: 80px;
+}
+.nav-link:hover{
+  transition: 0.2s ;
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+}
+#search{
+  height: 50px;
+  width: 300px;
+  margin-top: 10px;
+  }
+#search-btn{
+  border: 1px solid white;
+  color: white;
+
+}
+#search-btn:hover{
+  background-color: #fff;
+  border: 2px solid rgb(221, 13, 13);
+  font-weight: bold;
+  color: rgb(146, 4, 4);
+}
+#search{
+  height: 40px;
+  width: 300px;
+  margin-top: 10px;
+  }
+
+#carousel1 {
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(177, 6, 6);
+  color: white;
+  
+}
+
+@media screen and (max-width: 768px) {
+.top-navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.top-icons {
+    justify-content: center;
+}
+
+.other-links {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+}
+
+#btn-login,
+#btn-signup {
+    width: 80px;
+    height: 35px;
+    font-size: 12px;
+}
+
+.other-links i {
+    font-size: 20px;
+}
+
+.navbar {
+    padding: 8px;
+}
+
+.navbar-toggler {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.navbar-collapse {
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 8px;
+}
+
+.dropdown-menu {
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 14px;
+}
+
+
+#search {
+    width: 100%;
+    font-size: 14px;
+}
+
+#search-btn {
+    font-size: 14px;
+    margin-top: 7px;
+}
+}
+#newslater{
+    margin-top: 100px;
+  }
+  #newslater h3{
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+  .input{
+    margin-top: 30px;
+  }
+  .input input{
+    width: 350px;
+    height: 36px;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    border:  1px solid black;
+    padding-left: 5px;
+  }
+  #subscribe{
+    width: 200px;
+    height: 36px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(156, 14, 4);
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px black;
+  }
+  @media screen and (max-width:465px){
+    .input input{
+        width: 280px;
+    }
+    #subscribe{
+        margin-top: 10px;
+    }
+  }
+  @media screen and (max-width:250px){
+    .input input{
+        width: 150px;
+    }
+    #subscribe{
+        width: 150px;
+    }
+  }
+
+  #footer{
+  padding: 0 0 30px 0;
+  color: #d0d0d0;
+  font-size: 14px;
+  background: rgb(167, 4, 4);
+}
+#footer .footer-top{
+  padding: 60px 0 30px;
+  background: rgb(167, 4, 4);
+  color: #fff;
+}
+#footer .footer-top .footer-contact a{
+  font-size: 20px;
+  color: #f0cf15;
+  font-weight: bold;
+}
+#footer .footer-top .footer-contact a img{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#footer .footer-top .footer-contact h4{
+  font-size: 22px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+#footer .footer-top .footer-contact p{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: #b7b7b7; 
+}
+#footer .footer-top h4{
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+#footer .footer-top .footer-links{
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul li{
+  padding-right: 2px;
+  color: #f0cf15;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+}
+#footer .footer-top .footer-links ul li{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#footer .footer-top .footer-links ul li:first-child{
+  padding-top: 0;
+}
+#footer .footer-top .footer-links ul li a{
+  color: white;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+}
+#footer .footer-top .footer-links ul a:hover{
+  text-decoration: none;
+  color: #f0cf15;
+}
+
+#footer .footer-top .footer-link p{
+  padding-right: 2px;
+  color: #f0cf15;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  font-style: italic;
+}
+#footer .footer-top .footer-link p{
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#footer .footer-top .footer-link p a{
+  color: white;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+#footer .footer-top .footer-link p a:hover{
+  color: #f0cf15;
+}
+.social-links p{
+ display: block;
+ text-align: left;
+}
+#footer-bottom ul li{
+  font-size: 18px;
+  display: inline-block;
+  background: black;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 40px;
+  transition: 0.3s;
+  text-align: center;
+  
+}
+#footer-bottom ul li:hover{
+  background: rgb(163, 5, 5);
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .copyright{
+
+  text-align: center;
+  float: left;
+  font-size: 20px;
+}
+#footer .credits{
+  float: right;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .footer-top .row {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-contact, 
+  .footer-links, 
+  .footer-link, 
+  .footer-links {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-contact h5,
+  .footer-links h4,
+  .footer-link h4 {
+      font-size: 22px;
+  }
+
+  .footer-contact p,
+  .footer-links ul li a,
+  .footer-link p {
+      font-size: 14px;
+  }
+
+  .social-links p {
+      font-size: 13px;
+  }
+  #copyright p {
+    font-size: 25px;
+}
+}
+
+@media (max-width: 500px) {
+  .footer-top {
+      padding: 20px;
+  }
+
+  .footer-contact h5,
+  .footer-links h4 {
+      font-size: 16px;
+  }
+
+  .footer-contact p,
+  .footer-links ul li a,
+  .footer-link p {
+      font-size: 15px;
+  }
+
+  #copyright p {
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .list-inline {
+      text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .footer-contact h5 {
+      font-size: 20px;
+  }
+
+  .footer-links ul li a,
+  .footer-link p ,
+  .social-links p {
+      font-size: 15px;
+      margin-left: 40px;
+  }
+
+  #copyright p {
+      font-size: 20px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div id="textSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="carousel1">
+                ✨Welcome to our website!✨
+            </div>
+            <div class="carousel-item" id="carousel1">
+                ✨Discover amazing content.✨
+            </div>
+            <div class="carousel-item" id="carousel1">
+                ✨Stay tuned for updates.✨
+            </div>
+            <div class="carousel-item" id="carousel1">
+                ✨Contact us for more info.✨
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-navbar">
+        <div class="top-icons d-flex">
+           <img src="logo2.png" id="logo" alt=""><h3 >FORK & <br> FLOURISH</h3>
+           
+      
+        </div>
+        <div class="other-links">
+            <button id="btn-login"><a href="login.html">Login</a></button>
+            <button id="btn-signup"><a href="signup.html">Sign up</a></button>
+    
+            <i class="fa-regular fa-heart" ></i>
+            <i class="fa-solid fa-shopping-bag"></i>
+        </div>
+    </div>
+      
+      <div class="home-section">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="./image/logo.png" alt="" width="180px"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Cookware</a></li>
+                      <li><a class="dropdown-item" href="#">Cutlery</a></li>
+                      <li><a class="dropdown-item" href="#">Melamine</a></li>
+                      <li><a class="dropdown-item" href="#">Glassware</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about us.html">About Us</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">Contact Us</a>
+                  </li>
+                </ul>
+               
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+                  <button class="btn" type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="form">
+        <div class="container1">
+            <h2 class="text-center">Return Policy</h2>  
+            <p>We offer a hassle-free return process. Please read the policy below before making a return request.</p>
+        
+            <!-- Return Policy Details -->
+            <div class="accordion" id="returnPolicyAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Eligibility for Returns
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#returnPolicyAccordion">
+                        <div class="accordion-body">
+                            Items must be returned within **30 days** of delivery, unused, and in their original packaging.
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Refund Process
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#returnPolicyAccordion">
+                        <div class="accordion-body">
+                            Refunds will be processed within **7 business days** after inspecting the returned item.
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Non-Returnable Items
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#returnPolicyAccordion">
+                        <div class="accordion-body">
+                            Perishable goods, personalized items, and clearance items cannot be returned.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Return Request Form -->
+<h3 class="mt-4">Request a Return</h3>
+<form id="returnForm">
+<div class="mb-3">
+    <label for="orderNumber" class="form-label">Order Number</label>
+    <input type="text" class="form-control" id="orderNumber">
+    <span id="orderNumberError" class="error text-danger"></span>
+</div>
+<div class="mb-3">
+    <label for="reason" class="form-label">Reason for Return</label>
+    <select class="form-control" id="reason">
+        <option value="">Select Reason</option>
+        <option>Defective Product</option>
+        <option>Wrong Item Delivered</option>
+        <option>Size Issue</option>
+        <option>Changed My Mind</option>
+    </select>
+    <span id="reasonError" class="error text-danger"></span>
+</div>
+<div class="mb-3">
+    <label for="comments" class="form-label">Additional Comments</label>
+    <textarea class="form-control" id="comments" rows="3"></textarea>
+    <span id="commentsError" class="error text-danger"></span>
+</div>
+<button type="submit" class="btn btn-danger">Submit Request</button>
+<div id="successMessage" class="success text-success mt-3"></div>
+</form>
+
+<script>
+    // Only allow digits in order number field
+    document.getElementById("orderNumber").addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+    });
+
+    document.getElementById("returnForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Field values
+        const orderNumber = document.getElementById("orderNumber").value.trim();
+        const reason = document.getElementById("reason").value.trim();
+        const comments = document.getElementById("comments").value.trim();
+
+        // Error elements
+        const orderError = document.getElementById("orderNumberError");
+        const reasonError = document.getElementById("reasonError");
+        const commentsError = document.getElementById("commentsError");
+        const successMessage = document.getElementById("successMessage");
+
+        // Regex for order number (only digits, 5 to 10 characters)
+        const orderRegex = /^[0-9]{5,10}$/;
+
+        // Clear previous errors
+        orderError.textContent = "";
+        reasonError.textContent = "";
+        commentsError.textContent = "";
+        successMessage.textContent = "";
+
+        let valid = true;
+
+        // Validate order number
+        if (!orderRegex.test(orderNumber)) {
+            orderError.textContent = "Please enter a valid order number (5 to 10 digits).";
+            valid = false;
+        }
+
+        // Validate reason
+        if (reason === "") {
+            reasonError.textContent = "Please select a reason for return.";
+            valid = false;
+        }
+
+        // Validate comments
+        if (comments.length < 10) {
+            commentsError.textContent = "Please enter at least 10 characters in comments.";
+            valid = false;
+        }
+
+        if (valid) {
+            successMessage.textContent = "Return request submitted successfully!";
+            document.getElementById("returnForm").reset();
+        }
+    });
+</script>
+</script>            
+<div class="container" id="newslater">
+    <h3 class="text-center">Subscribe To Our Website For Latest upload.</h3>
+    <div class="input text-center">
+      <input type="text" placeholder="Enter Your Email..">
+      <button id="subscribe">SUBSCRIBE</button>
+    </div>
+  </div>
+
+<footer id="footer" style="margin-top: 50px;">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                 
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning"><b>FORK & FLOURISH</b></h5>
+                  <p>Embrace the art of flavor. Savor the magic of homemade. Crafting happiness, one recipe at a time. Filling homes with kitchen joy..</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="home.html">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="about us.html">About Us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="contact us.html">Contact Us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="feedback.html">Feedback</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="return.html">Return policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-link">
+                    <h4>Our Services</h4>
+                 
+                    <p>
+                      <a href="#" class="text-white" style="text-decoration: none;">Cookware</a>
+                    </p>
+                    <p>
+                      <a href="#" class="text-white" style="text-decoration: none;">Melamine</a>
+                    </p>
+                    <p>
+                      <a href="#" class="text-white" style="text-decoration: none;">Cutlery</a>
+                    </p>
+                    <p>
+                      <a href="#" class="text-white" style="text-decoration: none;">Glassware</a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Network</h4>
+                   
+                    <div class="social-links mt-3">
+                      <p>
+                        <i class="fas fa-home mr-3"></i>  Karachi, PK 2333,Pakistan
+                       </p>
+             
+                       <p>
+                        <i class="fas fa-envelope mr-3"></i>  abcd@gmail.com
+                       </p>
+             
+                       <p>
+                        <i class="fas fa-phone mr-3"></i>  +92 123456789
+                       </p>
+             
+                       <p>
+                        <i class="fas fa-print mr-3"></i>  +01 335 633 77
+                       </p>
+                    </div>
+                </div>
+
+
+            </div>
+           
+
+        </div>
+    </div>
+    <div class="container py-4" id="copyright">
+        <div class="copyright">
+          <p> Copyright: All rights reserved by:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-warning">Our Team</strong>
+            </a>
+          </p>
+        </div>
+        <div class="text-center text-md-right" id="footer-bottom">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    </footer>
+
+
+</body>
+</html>

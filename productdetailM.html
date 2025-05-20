@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="productdetails.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="header-footer.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    .cart-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item-image {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+  }
+  
+  .cart-item-details {
+      flex-grow: 1;
+  }
+  
+  #cartModal .modal-body {
+      max-height: 400px;
+      overflow-y: auto;
+  }
+  
+  
+  </style>
+</head>
+<body>
+
+    <!-- header code -->
+    <div class="container1">
+      <div id="textSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="carousel1">
+              ✨Welcome to our website!✨
+          </div>
+          <div class="carousel-item" id="carousel1">
+              ✨Discover amazing content.✨
+          </div>
+          <div class="carousel-item" id="carousel1">
+              ✨Stay tuned for updates.✨
+          </div>
+          <div class="carousel-item" id="carousel1">
+              ✨Contact us for more info.✨
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top-navbar">
+      <div class="top-icons d-flex">
+         <img src="logo2.png" id="logo" alt=""><h3 >FORK & <br> FLOURISH</h3>
+         
+    
+      </div>
+      <div class="other-links">
+          <button id="btn-login"><a href="login.html">Login</a></button>
+          <button id="btn-signup"><a href="signup.html">Sign up</a></button>
+  
+          <div class="cart position-relative"  id="wishlist-icon">
+            <i class="fa-regular fa-heart fa-lg p-2"></i>
+            <span id="wishlist-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            
+        </div>
+  
+          <div class="cart position-relative"  id="cart-icon">
+            <i class="fa-solid fa-shopping-bag fa-lg p-2"></i>
+            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            
+        </div>
+      </div>
+  </div>
+    
+    <div class="home-section">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="./image/logo.png" alt="" width="180px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="cookware.html">Cookware</a></li>
+                    <li><a class="dropdown-item" href="cutlery.html">Cutlery</a></li>
+                    <li><a class="dropdown-item" href="mellamine.html">Mellamine</a></li>
+                    <li><a class="dropdown-item" href="glassware.html">Glassware</a></li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Product Comparison
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="cookwarecomparison.html">Cookware</a></li>
+                    <li><a class="dropdown-item" href="cutlerycomparison.html">Cutlery</a></li>
+                    <li><a class="dropdown-item" href="mellaminecomparison.html">Mellamine</a></li>
+                    <li><a class="dropdown-item" href="glasswarecompariosn.html">Glassware</a></li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about us.html">About Us</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contact us.html">Contact Us</a>
+                </li>
+              </ul>
+             
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+                <button class="btn" type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        </div>
+      </div>
+    </nav>
+
+
+
+  
+    <div class="container11">
+        <!-- Product Image -->
+        <div class="product-image">
+          <img id="product-image" class="img-fluid p-5" src="" alt="Product Image">
+        </div>
+    
+        <!-- Product Details -->
+        <div class="product-details">
+          <h1 class="product-title" id="product-title">Loading...</h1>
+          <p class="product-description" id="product-description"></p>
+          <p class="product-price">Price: <span id="product-price">RS0/-</span></p>
+          
+    
+    
+          <!-- Quantity Controls -->
+          <div class="quantity-control">
+            <button id="decrease-quantity">-</button>
+            <input type="number" id="quantity-input" class="quantity-input" value="1" min="1" max="10">
+            <button id="increase-quantity">+</button>
+          </div>
+          <div class="icons">
+            <i id="icon" class="fa fa-star"></i>
+            <i id="icon1" class="fa fa-star"></i>
+            <i id="icon2" class="fa fa-star"></i>
+            <i id="icon3" class="fa fa-star"></i>
+            <i id="icon4" class="fa fa-star"></i>
+            
+          </div>
+
+          <div class="wishlist"><i class="fa-regular fa-heart"></i>Add To Wishlist </div>
+          
+    
+          <!-- Total Price -->
+          <p class="product-price">Total: <span id="total-price">RS0/-</span></p>
+    
+          <a href="checkout.html" class="add-to-cart">Buy Now</a>
+          <a href="mellamine.html" class="back-button">Back to Products</a>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!-- fotter code -->
+  <footer id="footer" style="margin-top: 50px;">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                 
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning"><b>FORK & FLOURISH</b></h5>
+                  <p>Embrace the art of flavor. Savor the magic of homemade. Crafting happiness, one recipe at a time. Filling homes with kitchen joy..</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="home.html">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="about us.html">About Us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="contact us.html">Contact Us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="feedback.html">Feedback</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="return.html">Return policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-link">
+                    <h4>Our Services</h4>
+                 
+                    <p>
+                      <a href="cookware.html" class="text-white" style="text-decoration: none;">Cookware</a>
+                    </p>
+                    <p>
+                      <a href="mellamine.html" class="text-white" style="text-decoration: none;">Mellamine</a>
+                    </p>
+                    <p>
+                      <a href="cutlery.html" class="text-white" style="text-decoration: none;">Cutlery</a>
+                    </p>
+                    <p>
+                      <a href="glassware.html" class="text-white" style="text-decoration: none;">Glassware</a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Network</h4>
+                   
+                    <div class="social-links mt-3">
+                      <p>
+                        <i class="fas fa-home mr-3"></i>  Karachi, PK 2333,Pakistan
+                       </p>
+             
+                       <p>
+                        <i class="fas fa-envelope mr-3"></i>  abcd@gmail.com
+                       </p>
+             
+                       <p>
+                        <i class="fas fa-phone mr-3"></i>  +92 123456789
+                       </p>
+             
+                       <p>
+                        <i class="fas fa-print mr-3"></i>  +01 335 633 77
+                       </p>
+                    </div>
+                </div>
+
+
+            </div>
+           
+
+        </div>
+    </div>
+    <div class="container py-4" id="copyright">
+        <div class="copyright">
+          <p> Copyright: All rights reserved by:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-warning">Our Team</strong>
+            </a>
+          </p>
+        </div>
+        <div class="text-center text-md-right" id="footer-bottom">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    </footer>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let cart = [];
+        const cartCount = document.getElementById("cart-count");
+        const cartIcon = document.getElementById("cart-icon");
+        const cartItemsContainer = document.getElementById("cart-items");
+        const cartTotal = document.getElementById("cart-total");
+        const addToCartButton = document.getElementById("add-to-cart");
+        const checkoutButton = document.getElementById("checkout");
+        const cancelButton = document.getElementById("cancel");
+      
+        // Function to get product details from container11
+        function getProductDetails() {
+            return {
+                title: document.getElementById("product-title").textContent,
+                image: document.getElementById("product-image").src,
+                description: document.getElementById("product-description").textContent,
+                price: parseFloat(document.getElementById("product-price").textContent.replace("Rs", "").trim()),
+                quantity: parseInt(document.getElementById("quantity-input").value),
+            };
+        }
+      
+        // Add to Cart Button Click
+        addToCartButton.addEventListener("click", () => {
+            const product = getProductDetails();
+            if (isNaN(product.price) || product.quantity < 1) {
+                alert("Invalid product details!");
+                return;
+            }
+      
+            const existingProduct = cart.find(item => item.title === product.title);
+            if (existingProduct) {
+                alert("Product already added!");
+            } else {
+                cart.push(product);
+                alert("Cart Successfully Added!");
+                updateCartUI();
+            }
+        });
+      
+        // Function to update cart UI
+        function updateCartUI() {
+            cartItemsContainer.innerHTML = "";
+            let total = 0;
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                cartItemsContainer.innerHTML = `
+                    <div>
+                        <img src="${item.image}" width="50">
+                        <strong>${item.title}</strong>
+                        <p>${item.description}</p>
+                        <p>Price: Rs ${item.price}</p>
+                        <p>Quantity: ${item.quantity}</p>
+                    </div>
+                `;
+            });
+            cartTotal.textContent = `Rs ${total}`;
+            cartCount.textContent = cart.length;
+        }
+      
+        // Show Cart Modal on Icon Click
+        cartIcon.addEventListener("click", () => {
+            if (cart.length === 0) {
+                alert("Cart is empty! Please add a product.");
+                return;
+            }
+            const cartModal = new bootstrap.Modal(document.getElementById("cart-modal"));
+            cartModal.show();
+        });
+      
+        // Checkout Button Click
+        checkoutButton.addEventListener("click", () => {
+            alert("Redirecting to Checkout...");
+            setTimeout(() => {
+                window.location.href = "checkout.html"; // Redirect to checkout page
+            }, 2000);
+        });
+      
+        // Cancel Button Click
+        cancelButton.addEventListener("click", () => {
+            alert("Returning to Product Page...");
+            setTimeout(() => {
+                window.location.href = "product.html"; // Redirect to product page
+            }, 2000);
+        });
+      });
+      </script>
+    
+    
+
+      <script>
+        // Mock Product Data
+        const products = [
+          { 
+            id: 1, 
+            title: "Mellamine Dinner Set", 
+            description: "Mellamine dinner ware set,glossy,vintage,lightweight",
+            price:5000, 
+            image: "images/d1.webp?text=Product+1"
+          },
+          
+          { 
+            id: 2, 
+            title: "Mellamine Dinner Set", 
+            description: "Mellamine dinner ware set,glossy,vintage,lightweight",
+            price: 5000, 
+            image: "images/d2.webp?text=Product+1"
+          },
+          
+          { 
+            id: 3, 
+            title: "Mellamine Dinner Set", 
+            description: "Mellamine dinner ware set,glossy,vintage,lightweight,floral,spring",
+            price: 5000, 
+            image: "images/d3.webp?text=Product+1"
+          },
+          
+          { 
+            id: 4, 
+            title: "Mellamine Dinner Set", 
+            description: "Mellamine dinner ware set,glossy,vintage,lightweight",
+            price: 5000, 
+            image: "images/d4.webp?text=Product+1"
+          },
+          
+          { 
+            id: 5, 
+            title: "Mellamine Serving Tray", 
+            description: "Elegant and decorative serving trays with handles,multi-purpose",
+            price: 3000, 
+            image: "images/t1.webp?text=Product+1"
+          },
+        
+          { 
+            id: 6, 
+            title: "Mellamine Serving Tray", 
+            description: "Elegant and decorative serving trays with handles,multi-purpose",
+            price: 3000, 
+            image: "images/t2.webp?text=Product+1"
+          },
+          
+          { 
+            id: 7, 
+            title: "Mellamine Serving Tray", 
+            description: "Elegant and decorative serving trays with handles,multi-purpose",
+            price: 3000, 
+            image: "images/t3.webp?text=Product+1"
+          },
+          
+          { 
+            id: 8, 
+            title: "Mellamine Serving Tray", 
+            description: "Elegant and decorative serving trays with handles,multi-purpose",
+            price: 3000, 
+            image: "images/t4.webp?text=Product+1"
+          },
+          
+          { 
+            id: 9, 
+            title: "Mellamine Serving Bowls", 
+            description: "Mellamine large bowls for pasta,salad,soup and multi-purpose",
+            price: 2000, 
+            image: "images/b1.webp?text=Product+1"
+          },
+          
+          { 
+            id: 10, 
+            title: "Mellamine Serving Bowls", 
+            description: "Mellamine large bowls for pasta,salad,soup and multi-purpose",
+            price: 2000, 
+            image: "images/b2.webp?text=Product+1"
+          },
+          
+          { 
+            id: 11, 
+            title: "Mellamine Serving Bowls", 
+            description: "Mellamine large bowls for pasta,salad,soup and multi-purpose",
+            price: 2000, 
+            image: "images/b3.webp?text=Product+1"
+          },
+          
+          { 
+            id: 12, 
+            title: "Mellamine Serving Bowls", 
+            description: "Mellamine large bowls for pasta,salad,soup and multi-purpose ",
+            price: 2000, 
+            image: "images/b4.webp?text=Product+1"
+          },
+          
+        ];
+    
+        // Parse Query String to Get Product ID
+        const params = new URLSearchParams(window.location.search);
+        const productId = parseInt(params.get("id"));
+    
+        // Elements
+        const productImage = document.getElementById("product-image");
+        const productTitle = document.getElementById("product-title");
+        const productDescription = document.getElementById("product-description");
+        const productPrice = document.getElementById("product-price");
+        const totalPrice = document.getElementById("total-price");
+        const quantityInput = document.getElementById("quantity-input");
+        const decreaseButton = document.getElementById("decrease-quantity");
+        const increaseButton = document.getElementById("increase-quantity");
+    
+        // Fetch Product Data
+        const product = products.find((p) => p.id === productId);
+    
+        if (product) {
+          // Update Page Content
+          productImage.src = product.image;
+          productTitle.textContent = product.title;
+          productDescription.textContent = product.description;
+          productPrice.textContent = `Rs${product.price.toFixed(0)}`;
+          totalPrice.textContent = `Rs${product.price.toFixed(0)}`;
+    
+          // Quantity Control Logic
+          const updateTotalPrice = () => {
+            const quantity = parseInt(quantityInput.value);
+            totalPrice.textContent = `Rs${(product.price * quantity).toFixed(0)}`;
+          };
+    
+          increaseButton.addEventListener("click", () => {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+            updateTotalPrice();
+          });
+    
+          decreaseButton.addEventListener("click", () => {
+            if (quantityInput.value > 1) {
+              quantityInput.value = parseInt(quantityInput.value) - 1;
+              updateTotalPrice();
+            }
+          });
+    
+          quantityInput.addEventListener("input", () => {
+            if (quantityInput.value < 1) quantityInput.value = 1;
+            updateTotalPrice();
+          });
+        } else {
+          productTitle.textContent = "Product Not Found";
+          productDescription.textContent = "";
+          productPrice.textContent = "RS0/-";
+          totalPrice.textContent = "RS0/-";
+        }
+
+      </script>
+    <script>
+       $(document).ready(function(){
+            $(".icons").click(function(){
+                $("#icon").css("color","red");
+            })
+            $(".icons").click(function(){
+                $("#icon1").css("color","red");
+            })
+            $(".icons").click(function(){
+                $("#icon2").css("color","red");
+            })
+            $(".icons").click(function(){
+                $("#icon3").css("color","red");
+            })
+            $(".icons").click(function(){
+                $("#icon4").css("color","red");
+            })
+        })
+    </script>
+</body>
+</html>

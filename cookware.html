@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOKWARE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="stylesheet" href="style1.css">
+<script>
+  // Redirect to Product Details Page with Product ID
+function goToDetails(productId) {
+  window.location.href = `productdetail.html?id=${productId}`;
+}
+</script>
+</head>
+<body>
+  <div class="container1">
+    <div id="textSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active" id="carousel1">
+            ✨Welcome to our website!✨
+        </div>
+        <div class="carousel-item" id="carousel1">
+            ✨Discover amazing content.✨
+        </div>
+        <div class="carousel-item" id="carousel1">
+            ✨Stay tuned for updates.✨
+        </div>
+        <div class="carousel-item" id="carousel1">
+            ✨Contact us for more info.✨
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="top-navbar">
+    <div class="top-icons d-flex">
+       <img src="logo2.png" id="logo" alt=""><h3 >FORK & <br> FLOURISH</h3>
+       
+  
+    </div>
+    <div class="other-links">
+        <button id="btn-login"><a href="login.html">Login</a></button>
+        <button id="btn-signup"><a href="signup.html">Sign up</a></button>
+
+        <div class="cart position-relative"  id="wishlist-icon">
+          <i class="fa-regular fa-heart fa-lg p-2"></i>
+          <span id="wishlist-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          
+      </div>
+
+        <div class="cart position-relative"  id="cart-icon">
+          <i class="fa-solid fa-shopping-bag fa-lg p-2"></i>
+          <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          
+      </div>
+    </div>
+</div>
+  
+  <div class="home-section">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./image/logo.png" alt="" width="180px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="cookware.html">Cookware</a></li>
+                  <li><a class="dropdown-item" href="cutlery.html">Cutlery</a></li>
+                  <li><a class="dropdown-item" href="mellamine.html">Mellamine</a></li>
+                  <li><a class="dropdown-item" href="glassware.html">Glassware</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Product Comparison
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="cookwarecomparison.html">Cookware</a></li>
+                  <li><a class="dropdown-item" href="cutlerycomparison.html">Cutlery</a></li>
+                  <li><a class="dropdown-item" href="mellaminecomparison.html">Mellamine</a></li>
+                  <li><a class="dropdown-item" href="glasswarecomparison.html">Glassware</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about us.html">About Us</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact us.html">Contact Us</a>
+              </li>
+            </ul>
+           
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+              <button class="btn" type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <h1 class="text-center"><i>COOKWARE</i></h1>
+    
+    <div class="container py-3 " id="product-cards" data-id="1">
+        <div class="row" >
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(1)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/stick3.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Non-stick Frying Pan</h4>
+              
+                <small id="a" class="bg-white text-center">3000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(2)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/stick4.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Non-stick Pans Set</h4>
+              
+                <small id="a" class="bg-white text-center">5000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(3)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/stick1.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Non-stick Frying Pan</h4>
+              
+                <small id="a" class="bg-white text-center">3000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(4)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/stick2.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Non-stick Pans Set</h4>
+              
+                <small id="a" class="bg-white text-center">5000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+    <div class="container py-3" id="product-cards" data-id="1">
+        <div class="row" >
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(5)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/c1.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Steel Pressure Cooker</h4>
+              
+                <small id="a" class="bg-white text-center">4000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(6)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/c2.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Instant Cooking Pot</h4>
+              
+                <small id="a" class="bg-white text-center">5000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View" onclick="goToDetails(7)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/c3.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Steel Pressure Cooker</h4>
+              
+                <small id="a" class="bg-white text-center">4000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(8)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/c4.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Instant Cooking Pot</h4>
+              
+                <small id="a" class="bg-white text-center">5000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+    <div class="container py-3" id="product-cards" data-id="1">
+        <div class="row" >
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(9)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/steel1.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Steel Cookware Set</h4>
+              
+                <small id="a" class="bg-white text-center">6000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(10)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/steel2.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Steel Cookware Set</h4>
+              
+                <small id="a" class="bg-white text-center">6000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(11)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/steel3.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Steel Cookware Set</h4>
+              
+                <small id="a" class="bg-white text-center">6000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card">
+              <div class="overlay">
+                <button type="button" class="btn btn-secondary" title="dd to Wishlist"><a href="wishlist.html"><i class="fa fa-heart"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Add to Cart"><a href="addtocart.html"><i class="fa fa-shopping-bag"></i></a></button>
+                <button type="button" class="btn btn-secondary" title="Quick View"  onclick="goToDetails(12)"><i  class="fa fa-eye"></i></button>
+               </div>
+              <img src="images/steel4.jpg"  height="265px" alt="">
+              <div class="card-body">
+                <h4 class="text-center">Stainless Steel Cookware Set</h4>
+              
+                <small id="a" class="bg-white text-center">6000</small><br>  
+                <button id="two" class="add-to-cart" ><a href="#">add to cart</a></button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+        
+        
+        <!-- side bar code  -->
+       <!-- side bar code -->
+
+       <!-- add to cart -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <!-- <button class="btn-close float-end " id="close-cart"></button> -->
+        <button class="close-btn btn-close float-end" id="close-cart">X</button>
+        
+
+    </div>
+      
+    <p id="empty-cart-message" class="text-center text-muted">Cart is empty</p>
+      <div id="cart-items"></div>
+      <h5 class="text-center mt-3">Total: $<span id="cart-total">0.00</span></h5>
+      <button class="btn mt-2 w-100 checkOut" id="checkout" onclick="redirect()">Checkout</button>
+  </div>
+
+  <script>
+    function redirect(){
+      window.location.href="checkout.html";
+    }
+  </script>
+
+  
+
+
+<!-- Wishlist Sidebar -->
+<div class="cartTab" id="wishlist-sidebar">
+  <div class="cart-header">
+      <h2>Wishlist</h2>
+      <button class="close-btn" id="close-wishlist">X</button>
+  </div>
+  <div class="cart-content" id="wishlist-items">
+      <p>Your wishlist is empty</p>
+  </div>
+  <!-- <button class="btn btn-primary wishlist-btn mt-3">Add to cart</button> -->
+  <!-- <button class="btn btn-sm btn-primary move-to-cart" data-index="${index}">Add to Cart</button> -->
+  <button id="moveAllToCart" class="btn btn-primary">Move All to Cart</button>
+
+</div>
+
+      
+<script>
+  let wishlist = [];
+
+  document.querySelectorAll('.card').forEach((card, index) => {
+      let addToWishlistBtn = card.querySelector('#whishlisticon');
+
+      if (addToWishlistBtn) {
+          addToWishlistBtn.addEventListener('click', (event) => {
+              event.preventDefault();
+
+              let priceText = card.querySelector('small#a').innerText.trim();
+              let price = parseFloat(priceText.replace(/[^\d.]/g, '')); // Remove non-numeric characters
+
+              let product = {
+                  id: index,
+                  name: card.querySelector('h4.text-center').innerText,
+                  price: price,
+                  image: card.querySelector('img').src
+              };
+
+              let existing = wishlist.find(item => item.id === product.id);
+              if (existing) {
+                  showAlert('Product already in wishlist!', 'alert-danger');
+              } else {
+                  wishlist.push(product);
+                  updateWishlist();
+                  showAlert('Product added to wishlist!', 'alert-success');
+              }
+          });
+      }
+  });
+
+  document.getElementById('wishlist-icon').addEventListener('click', () => {
+      document.getElementById('wishlist-sidebar').classList.add('active');
+      updateWishlist();
+  });
+
+  document.getElementById('close-wishlist').addEventListener('click', () => {
+      document.getElementById('wishlist-sidebar').classList.remove('active');
+  });
+
+  function updateWishlist() {
+      let wishlistItems = document.getElementById('wishlist-items');
+      let wishlistCount = document.getElementById('wishlist-count');
+
+      wishlistItems.innerHTML = '';
+      wishlistCount.textContent = wishlist.length;
+
+      if (wishlist.length === 0) {
+          wishlistItems.innerHTML = '<p>Your wishlist is empty</p>';
+          return;
+      }
+
+      
+
+      wishlist.forEach((item, index) => {
+          wishlistItems.innerHTML += `
+              <div class="d-flex align-items-center border-bottom p-2 wishlist-item">
+    <img class="img-fluid" src="${item.image}" alt="${item.name}" style="width: 60px; height: 60px; object-fit: cover;">     
+    <div class="flex-grow-1 ms-2 px-3">
+        <span class="fw-bold card-text d-block mb-3">${item.name}</span>
+        <strong>$${item.price.toFixed(2)}</strong>
+        
+    </div>
+    <button class="btn btn-sm btn-danger remove-wishlist-item" data-index="${index}">
+        <i class="fas fa-trash"></i>
+    </button>
+</div>
+
+          `;
+      });
+
+      document.querySelectorAll('.remove-wishlist-item').forEach(button => {
+          button.addEventListener('click', (event) => {
+              let index = event.target.closest('button').dataset.index;
+              wishlist.splice(index, 1);
+              updateWishlist();
+          });
+      });
+  }
+
+  function showAlert(message, alertClass) {
+      let alertBox = document.createElement('div');
+      alertBox.className = `alert ${alertClass} position-fixed top-0 start-50 translate-middle-x mt-3 shadow`;
+      alertBox.style.zIndex = '1050';
+      alertBox.innerHTML = message;
+
+      document.body.appendChild(alertBox);
+
+      setTimeout(() => {
+          alertBox.remove();
+      }, 2000);
+  }
+</script>
+
+<!-- move wishlist item to cart code  -->
+ <script>
+  document.getElementById('moveAllToCart').addEventListener('click', function () {
+    if (wishlist.length === 0) {
+        showAlert("Your wishlist is empty!", "alert-danger");
+        return;
+    }
+
+    wishlist.forEach(item => {
+        let existingCartItem = cart.find(cartItem => cartItem.id === item.id);
+        
+        if (existingCartItem) {
+            showAlert(`"${item.name}" is already in the cart!`, "alert-warning");
+        } else {
+            cart.push({ ...item, quantity: 1 }); // Add with quantity 1
+        }
+    });
+
+    wishlist.length = 0;
+    updateWishlist();
+    updateCart();
+    showAlert("All wishlist items moved to cart!", "alert-success");
+});
+
+ </script>
+
+
+<script>
+  
+  let cartCount = 0;
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+        // Check if this item is already added to cart
+        if (this.getAttribute('data-added') === 'true') {
+            showAlert('Your cart already added!', 'alert-danger');
+            return; // Stop execution, don't increase counter
+        }
+
+        // Mark item as added
+        this.setAttribute('data-added', 'true');
+
+
+        let cartItemsContainer = document.getElementById('cart-items');
+            let emptyCartText = document.getElementById('empty-cart-message');
+            if (cartCount > 0 && emptyCartText) { 
+                emptyCartText.style.display = 'none';
+            }
+
+        // Increase cart counter
+        cartCount++;
+        document.getElementById('cart-count').textContent = cartCount;
+
+        // Show success alert
+        showAlert('Your cart added successfully!', 'alert-success');
+    });
+});
+
+// Function to show alert messages
+function showAlert(message, alertClass) {
+    let alertBox = document.createElement('div');
+    alertBox.className = `alert ${alertClass} position-fixed top-0 start-50 translate-middle-x mt-3 shadow`;
+    alertBox.style.zIndex = '1050';
+    alertBox.innerHTML = message;
+    
+    document.body.appendChild(alertBox);
+    
+    setTimeout(() => {
+        alertBox.remove();
+    }, 2000);
+}
+
+        </script>
+
+
+
+<script>
+  let cart = [];
+
+    document.querySelectorAll('.card').forEach((card, index) => {
+    let addToCartBtn = card.querySelector('button#two a');
+    
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            let priceText = card.querySelector('small#a').innerText.trim();
+            let price = parseFloat(priceText.replace(/[^\d.]/g, '')); // Remove non-numeric characters
+
+            let product = {
+                id: index,
+                name: card.querySelector('h4.text-center').innerText,
+                price: price,
+                image: card.querySelector('img').src,
+                quantity: 1
+            };
+
+            let existing = cart.find(item => item.id === product.id);
+            if (existing) {
+                //existing.quantity++;
+                
+            } else {
+                cart.push(product);
+            }
+
+            document.getElementById('cart-count').textContent = cart.length;
+            updateCart();
+
+            
+        });
+    }
+});
+
+document.getElementById('cart-icon').addEventListener('click', () => {
+    document.getElementById('cart-sidebar').classList.add('active');
+    updateCart();
+});
+
+document.getElementById('close-cart').addEventListener('click', () => {
+    document.getElementById('cart-sidebar').classList.remove('active');
+});
+
+
+
+
+
+function updateCart() {
+    let cartItems = document.getElementById('cart-items');
+    let cartTotal = document.getElementById('cart-total');
+    let cartCount = document.getElementById('cart-count');
+
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        let itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+      
+
+        cartItems.innerHTML += `
+        <div class="cart-item">
+            <img class="img-fluid mt-2" src="${item.image}" alt="${item.name}">
+            <div class="flex-grow-1 ms-3">
+                <span class="card-text">${item.name}</span>
+                <div class="d-flex justify-content-between align-items-center mt-3 quantity-controls">
+                    <button class="btn btn-sm btn-outline-secondary decrease-qty" data-index="${index}">-</button>
+                    <span>${item.quantity}</span>
+                    <button class="btn btn-sm btn-outline-secondary increase-qty" data-index="${index}">+</button>
+                    <strong class="text-primary">$${itemTotal.toFixed(2)}</strong>
+                </div>
+            </div>
+            <button class="btn btn-sm remove-item" data-index="${index}">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>
+    `;
+    });
+
+    cartTotal.textContent = `${total.toFixed(2)}`;
+    cartCount.textContent = cart.length;
+
+    document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', (event) => {
+            let index = event.target.closest('button').dataset.index;
+            cart.splice(index, 1);
+            updateCart();
+        });
+    });
+
+    document.querySelectorAll('.increase-qty').forEach(button => {
+        button.addEventListener('click', (event) => {
+            let index = event.target.dataset.index;
+            cart[index].quantity++;
+            updateCart();
+        });
+    });
+
+    document.querySelectorAll('.decrease-qty').forEach(button => {
+        button.addEventListener('click', (event) => {
+            let index = event.target.dataset.index;
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        });
+    });
+} 
+
+
+
+
+      </script>
+  
+    
+  
+  <script>
+    let wishlistCount = 0;
+
+    document.querySelectorAll('#whishlisticon').forEach(button => {
+        button.addEventListener('click', function () {
+            // Check if this item is already added to wishlist
+            if (this.getAttribute('data-added') === 'true') {
+                showAlert('Item is already in your wishlist!', 'alert-danger');
+                return; // Stop execution, don't increase counter
+            }
+
+            // Mark item as added
+            this.setAttribute('data-added', 'true');
+
+            // Increase wishlist counter
+            wishlistCount++;
+            document.getElementById('wishlist-count').textContent = wishlistCount;
+
+            // Show success alert
+            showAlert('Item added to wishlist successfully!', 'alert-success');
+        });
+    });
+
+    // Function to show alert messages
+    function showAlert(message, alertClass) {
+        let alertBox = document.createElement('div');
+        alertBox.className = `alert ${alertClass} position-fixed top-0 start-50 translate-middle-x mt-3 shadow`;
+        alertBox.style.zIndex = '1050';
+        alertBox.innerHTML = message;
+
+        document.body.appendChild(alertBox);
+
+        setTimeout(() => {
+            alertBox.remove();
+        }, 2000);
+    }
+</script>
+
+  
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+        const wishlistTab = document.getElementById('wishlist');
+        const closeWishlist = document.getElementById('closeWishlist');
+        const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+        const wishlistContent = document.getElementById('wishlistContent');
+        
+        wishlistButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const card = this.closest('.card');
+                const productName = card.querySelector('.card-title').innerText;
+                const productImage = card.querySelector('img').src;
+                const productPrice = card.querySelector('small').innerText;
+                
+                const wishlistItem = document.createElement('div');
+                wishlistItem.classList.add('wishlist-item');
+                wishlistItem.innerHTML = `
+                    <img src="${productImage}" alt="${productName}">
+                    <div>
+                        <p>${productName}</p>
+                        <p>${productPrice}</p>
+                    </div>
+                    <button class="remove-item">Remove</button>
+                `;
+                
+                wishlistContent.innerHTML = '';
+                wishlistContent.appendChild(wishlistItem);
+                wishlistTab.classList.add('active');
+                
+                wishlistItem.querySelector('.remove-item').addEventListener('click', function () {
+                    wishlistItem.remove();
+                    if (!wishlistContent.hasChildNodes()) {
+                        wishlistContent.innerHTML = '<p>Your list is empty</p>';
+                    }
+                });
+            });
+        });
+        
+        closeWishlist.addEventListener('click', function () {
+            wishlistTab.classList.remove('active');
+        });
+    }); 
+  </script>
+        
+        
+        <div class="container" id="newslater">
+          <h3 class="text-center">Subscribe To Our Website For Latest upload.</h3>
+          <div class="input text-center">
+            <input type="text" placeholder="Enter Your Email..">
+            <button id="subscribe">SUBSCRIBE</button>
+          </div>
+        </div>
+          <footer id="footer" style="margin-top: 50px;">
+              <div class="footer-top">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-3 col-md-6 footer-contact">
+                           
+                            <h5 class="text-uppercase mb-4 font-weight-bold text-warning"><b>FORK & FLOURISH</b></h5>
+                            <p>Embrace the art of flavor. Savor the magic of homemade. Crafting happiness, one recipe at a time. Filling homes with kitchen joy..</p>
+                          </div>
+          
+                          <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="home.html">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="about us.html">About Us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="contact us.html">Contact Us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="feedback.html">Feedback</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="return.html">Return policy</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="col-lg-3 col-md-6 footer-link">
+                            <h4>Our Services</h4>
+                         
+                            <p>
+                              <a href="cookware.html" class="text-white" style="text-decoration: none;">Cookware</a>
+                            </p>
+                            <p>
+                              <a href="mellamine.html" class="text-white" style="text-decoration: none;">Melamine</a>
+                            </p>
+                            <p>
+                              <a href="cutlery.html" class="text-white" style="text-decoration: none;">Cutlery</a>
+                            </p>
+                            <p>
+                              <a href="glassware.html" class="text-white" style="text-decoration: none;">Glassware</a>
+                            </p>
+                        </div>
+          
+                          <div class="col-lg-3 col-md-6 footer-links">
+                              <h4>Our Social Network</h4>
+                             
+                              <div class="social-links mt-3">
+                                <p>
+                                  <i class="fas fa-home mr-3"></i>  Karachi, PK 2333,Pakistan
+                                 </p>
+                       
+                                 <p>
+                                  <i class="fas fa-envelope mr-3"></i>  abcd@gmail.com
+                                 </p>
+                       
+                                 <p>
+                                  <i class="fas fa-phone mr-3"></i>  +92 123456789
+                                 </p>
+                       
+                                 <p>
+                                  <i class="fas fa-print mr-3"></i>  +01 335 633 77
+                                 </p>
+                              </div>
+                          </div>
+          
+          
+                      </div>
+                     
+          
+                  </div>
+              </div>
+              <div class="container py-4" id="copyright">
+                  <div class="copyright">
+                    <p> Copyright: All rights reserved by:
+                      <a href="#" style="text-decoration: none;">
+                        <strong class="text-warning">Our Team</strong>
+                      </a>
+                    </p>
+                  </div>
+                  <div class="text-center text-md-right" id="footer-bottom">
+                    <ul class="list-unstyled list-inline">
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+              </footer>
+</body>
+</html>

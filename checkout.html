@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.container {
+    background-color: #e7e9ee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h2 {
+    color: #070707;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#btn {
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    background-color:  rgb(167, 4, 4);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#btn:hover {
+    background-color: rgb(167, 4, 4);
+}
+
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+.success {
+    color: green;
+    font-size: 18px;
+    font-family: Cooper, sans-serif;
+    font-style: italic;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.summary {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.p1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, .summary {
+        width: 100%;
+    }
+
+    #btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container, .summary {
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #btn {
+        font-size: 16px;
+        height: 45px;
+    }
+}
+    </style>
+   
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-container">
+            <h2>Billing Details</h2><br>
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name">
+                    <div id="nameError" class="error"></div>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
+                    <div id="addressError" class="error"></div>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="city">City/Town:</label>
+                    <input type="text" id="city" name="city">   
+                    <div id="cityError" class="error"></div>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="phonenumber">Phone Number:</label>
+                    <input type="text" id="phonenumber" name="phonenumber">
+                    <div id="phonenumberError" class="error"></div>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                    <div id="emailError" class="error"></div>
+                </div><br>
+
+                <button id="btn" type="submit">Place Order</button>
+                <div id="successMessage" class="success"></div>
+            </form>
+        </div>
+
+        <!-- <div class="summary">
+            <h2>Your Order</h2><br>
+            <div class="p1"><h3>PRODUCT</h3><h3>Subtotal</h3></div>
+            <hr><br><br>
+            <h3>Payment Method</h3>
+            <ul>
+                <li>Cash On Delivery</li>
+            </ul><br>
+        </div> -->
+    </div>
+
+    <script src="another.js"></script>
+</body>
+</html>

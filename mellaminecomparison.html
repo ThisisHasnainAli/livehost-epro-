@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Comparison with Images</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    h2{
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-style: italic;
+    }
+
+    h4{
+      font-family:'Courier New', Courier, monospace;
+    
+    }
+    .top-navbar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: white;
+  flex-wrap: wrap; 
+}
+
+
+.top-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+}
+
+.top-icons h3 {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+
+.other-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.other-links i {
+  font-size: 22px;
+  cursor: pointer;
+  color: black;
+}
+
+.other-links a {
+  text-decoration: none;
+}
+
+#btn-login,
+#btn-signup {
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#btn-login a,
+#btn-signup a {
+  text-decoration: none;
+  color: black;
+}
+
+#btn-login:hover {
+  background-color: #a87272;
+  color: white;
+}
+
+#btn-signup:hover {
+  background-color: #722f2f;
+  color: white;
+}
+
+
+.navbar {
+  background: rgb(177, 6, 6);
+
+}
+
+.navbar-brand img {
+  width: 160px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 18px;
+  
+}
+.fixed-top {
+  position: fixed;
+   margin-top: 120px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.nav-link:hover{
+  transition: 0.2s ;
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+}
+#search{
+  height: 50px;
+  width: 300px;
+  margin-top: 10px;
+  }
+#search-btn{
+  border: 1px solid white;
+  color: white;
+
+}
+#search-btn:hover{
+  background-color: #fff;
+  border: 2px solid rgb(221, 13, 13);
+  font-weight: bold;
+  color: rgb(146, 4, 4);
+}
+#carousel1 {
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgb(177, 6, 6);
+  color: white;
+  
+}
+
+@media screen and (max-width: 768px) {
+.top-navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.top-icons {
+    justify-content: center;
+}
+
+.other-links {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+}
+
+#btn-login,
+#btn-signup {
+    width: 80px;
+    height: 35px;
+    font-size: 12px;
+}
+
+.other-links i {
+    font-size: 20px;
+}
+
+.navbar {
+    padding: 8px;
+}
+
+.navbar-toggler {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.navbar-collapse {
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 8px;
+}
+
+.dropdown-menu {
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 14px;
+}
+
+
+#search {
+    width: 100%;
+    font-size: 14px;
+}
+
+#search-btn {
+    font-size: 14px;
+    margin-top: 7px;
+}
+}
+
+#footer{
+  padding: 0 0 30px 0;
+  color: #d0d0d0;
+  font-size: 14px;
+  background: rgb(167, 4, 4);
+}
+#footer .footer-top{
+  padding: 60px 0 30px;
+  background: rgb(167, 4, 4);
+  color: #fff;
+}
+#footer .footer-top .footer-contact a{
+  font-size: 20px;
+  color: #f0cf15;
+  font-weight: bold;
+}
+#footer .footer-top .footer-contact a img{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#footer .footer-top .footer-contact h4{
+  font-size: 22px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+#footer .footer-top .footer-contact p{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: #b7b7b7; 
+}
+#footer .footer-top h4{
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+#footer .footer-top .footer-links{
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul li{
+  padding-right: 2px;
+  color: #f0cf15;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+}
+#footer .footer-top .footer-links ul li{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#footer .footer-top .footer-links ul li:first-child{
+  padding-top: 0;
+}
+#footer .footer-top .footer-links ul li a{
+  color: white;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+}
+#footer .footer-top .footer-links ul a:hover{
+  text-decoration: none;
+  color: #f0cf15;
+}
+
+#footer .footer-top .footer-link p{
+  padding-right: 2px;
+  color: #f0cf15;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  font-style: italic;
+}
+#footer .footer-top .footer-link p{
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#footer .footer-top .footer-link p a{
+  color: white;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+#footer .footer-top .footer-link p a:hover{
+  color: #f0cf15;
+}
+.social-links p{
+ display: block;
+ text-align: left;
+}
+#footer-bottom ul li{
+  font-size: 18px;
+  display: inline-block;
+  background: black;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 40px;
+  transition: 0.3s;
+  text-align: center;
+  
+}
+#footer-bottom ul li:hover{
+  background: rgb(163, 5, 5);
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .copyright{
+
+  text-align: center;
+  float: left;
+  font-size: 20px;
+}
+#footer .credits{
+  float: right;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .footer-top .row {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-contact, 
+  .footer-links, 
+  .footer-link, 
+  .footer-links {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-contact h5,
+  .footer-links h4,
+  .footer-link h4 {
+      font-size: 22px;
+  }
+
+  .footer-contact p,
+  .footer-links ul li a,
+  .footer-link p {
+      font-size: 14px;
+  }
+
+  .social-links p {
+      font-size: 13px;
+  }
+  #copyright p {
+    font-size: 25px;
+}
+}
+
+@media (max-width: 500px) {
+  .footer-top {
+      padding: 20px;
+  }
+
+  .footer-contact h5,
+  .footer-links h4 {
+      font-size: 16px;
+  }
+
+  .footer-contact p,
+  .footer-links ul li a,
+  .footer-link p {
+      font-size: 15px;
+  }
+
+  #copyright p {
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .list-inline {
+      text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .footer-contact h5 {
+      font-size: 20px;
+  }
+
+  .footer-links ul li a,
+  .footer-link p ,
+  .social-links p {
+      font-size: 15px;
+      margin-left: 40px;
+  }
+
+  #copyright p {
+      font-size: 20px;
+  }
+}
+
+ 
+  </style>
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Product Comparison</title>
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container1">
+        <div id="textSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="carousel1">
+                ✨Welcome to our website!✨
+            </div>
+            <div class="carousel-item" id="carousel1">
+                ✨Discover amazing content.✨
+            </div>
+            <div class="carousel-item" id="carousel1">
+                ✨Stay tuned for updates.✨
+            </div>
+            <div class="carousel-item" id="carousel1">
+                ✨Contact us for more info.✨
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-navbar">
+        <div class="top-icons d-flex">
+           <img src="logo2.png" id="logo" alt=""><h3 >FORK & <br> FLOURISH</h3>
+           
+      
+        </div>
+        <div class="other-links">
+            <button id="btn-login"><a href="login.html">Login</a></button>
+            <button id="btn-signup"><a href="signup.html">Sign up</a></button>
+    
+           <a href="wishlist.html"> <i class="fa-regular fa-heart" ></i></a>
+            <a href="addtocart.html"><i class="fa-solid fa-shopping-bag"></i></a>
+        </div>
+    </div>
+      
+      <div class="home-section">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="./image/logo.png" alt="" width="180px"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="cookware.html">Cookware</a></li>
+                      <li><a class="dropdown-item" href="cutlery.html">Cutlery</a></li>
+                      <li><a class="dropdown-item" href="mellamine.html">Mellamine</a></li>
+                      <li><a class="dropdown-item" href="glassware.html">Glassware</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Product Comparison
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="cookwarecomparison.html">Cookware</a></li>
+                      <li><a class="dropdown-item" href="cutlerycomparison.html">Cutlery</a></li>
+                      <li><a class="dropdown-item" href="mellaminecomparison.html">Mellamine</a></li>
+                      <li><a class="dropdown-item" href="glasswarecompariosn.html">Glassware</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about us.html">About Us</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">Contact Us</a>
+                  </li>
+                </ul>
+               
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+                  <button class="btn" type="submit" id="search-btn"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          </div>
+        </div>
+      </nav>
+    <div class="container my-5">
+      <h2 class="text-center text-danger ">Product Comparison</h2>
+    
+      <!-- Grid Layout for Product Comparison -->
+      <div class="row">
+        <!-- Product 1 Column -->
+        <div class="col-lg-3 col-md-6 mb-4 ">
+          <h4 class="text-center py-5 "><b>Product 1</b></h4>
+          <div class="text-center ">
+            <img src="images/d1.webp" alt="Product 1" class="img-fluid" style="max-width: 220px;">
+          </div>
+          <ul class="list-group border  mt-3">
+            <li class="list-group-item border border-secondary"><b>Name:</b>Mellamine Dinner Set</li>
+            <li class="list-group-item border border-secondary"><b>Price:</b> 5000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b> Mellamine dinner ware set,glossy,vintage,lightweight</li>
+            <li class="list-group-item  border border-secondary"><b>color:</b>white with wavy border</li>
+          </ul>
+        </div>
+    
+        <!-- Product 2 Column -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 2</b></h4>
+          <div class="text-center">
+            <img src="images/d2.webp" alt="Product 2" class="img-fluid" style="max-width: 270px;">
+          </div>
+          <ul class="list-group  mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name:</b>Mellamine Dinner Set</li>
+            <li class="list-group-item  border border-secondary"><b>Price:</b> 5000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b>Mellamine dinner ware set,glossy,vintage,lightweight</li>
+            <li class="list-group-item  border border-secondary"><b>color:</b>white with brown border</li>
+          </ul>
+        </div> 
+    
+        <!-- Product 3 Column -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 3</b></h4>
+          <div class="text-center">
+            <img src="images/d3.webp" alt="Product 3" class="img-fluid" style="max-width: 270px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name:</b>Mellamine Dinner Set</li>
+            <li class="list-group-item  border border-secondary"><b>Price:</b>5000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b>Mellamine dinner ware set,glossy,vintage,lightweight</li>
+            <li class="list-group-item  border border-secondary"><b>Color:</b>blue with flowers</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 4</b></h4>
+          <div class="text-center">
+            <img src="images/d4.webp" alt="Product 4" class="img-fluid" style="max-width: 310px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name:</b>Mellamine Dinner Set</li>
+            <li class="list-group-item  border border-secondary"><b>Price:</b> 5000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b>Mellamine dinner ware set,glossy,vintage,lightweight</li>
+            <li class="list-group-item  border border-secondary"><b>Color:</b>white with brown touch</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 5</b></h4>
+          <div class="text-center">
+            <img src="images/t1.webp" alt="Product 5" class="img-fluid" style="max-width: 185px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name:</b>Mellamine Serving Tray</li>
+            <li class="list-group-item  border border-secondary"><b>Price:</b> 7000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b>Elegant and decorative serving trays with handles,multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color:</b>white with gold border</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 6</b></h4>
+          <div class="text-center">
+            <img src="images/t2.webp" alt="Product 6" class="img-fluid" style="max-width: 198px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name:</b>Mellamine Serving Tray</li>
+            <li class="list-group-item  border border-secondary"><b>Price:</b> 3000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b>Elegant and decorative serving trays with handles,multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color:</b>colorful marble effect</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 7</b></h4>
+          <div class="text-center">
+            <img src="images/t3.webp" alt="Product 7" class="img-fluid" style="max-width: 190px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name:</b>Mellamine Serving Tray</li>
+            <li class="list-group-item  border border-secondary"><b>Price:</b> 7000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b>Elegant and decorative serving trays with handles,multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color:</b>white base with floral</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 8</b></h4>
+          <div class="text-center">
+            <img src="images/t4.webp" alt="Product 8" class="img-fluid" style="max-width: 270px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name:</b>Mellamine Serving Tray</li>
+            <li class="list-group-item  border border-secondary"><b>Price:</b> 7000</li>
+            <li class="list-group-item  border border-secondary"><b>Description:</b>Elegant and decorative serving trays with handles,multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color:</b>lavendar with flower field</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 9</b></h4>
+          <div class="text-center">
+            <img src="images/b1.webp" alt="Product 9" class="img-fluid" style="max-width: 160px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name</b>:Mellamine Serving Bowls</li>
+            <li class="list-group-item  border border-secondary"><b>Price</b>: 2000</li>
+            <li class="list-group-item  border border-secondary"><b>Description</b>:Mellamine large bowls for pasta,salad,soup and multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color</b>:white gives ceramic effect</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 10</b></h4>
+          <div class="text-center">
+            <img src="images/b2.webp" alt="Product 10" class="img-fluid" style="max-width: 220px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name</b>:Mellamine Serving Bowls</li>
+            <li class="list-group-item  border border-secondary"><b>Price</b>: 2000</li>
+            <li class="list-group-item  border border-secondary"><b>Description</b>:Mellamine large bowls for pasta,salad,soup and multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color</b>:yellow gives shiny effect</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 11</b></h4>
+          <div class="text-center">
+            <img src="images/b3.webp" alt="Product 11" class="img-fluid" style="max-width: 210px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name</b>:Mellamine Serving Bowls</li>
+            <li class="list-group-item  border border-secondary"><b>Price</b>: 5000</li>
+            <li class="list-group-item  border border-secondary"><b>Description</b>:Mellamine large bowls for pasta,salad,soup and multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color</b>:white with shiny effect</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="text-center py-5"><b>Product 12</b></h4>
+          <div class="text-center">
+            <img src="images/b4.webp" alt="Product 12" class="img-fluid" style="max-width: 280px;">
+          </div>
+          <ul class="list-group mt-3">
+            <li class="list-group-item  border border-secondary"><b>Name</b>:Mellamine Serving Bowls</li>
+            <li class="list-group-item  border border-secondary"><b>Price</b>: 5000</li>
+            <li class="list-group-item  border border-secondary"><b>Description</b>:Mellamine large bowls for pasta,salad,soup and multi-purpose</li>
+            <li class="list-group-item  border border-secondary"><b>color</b>:green with sheesha effect</li>
+          </ul>
+        </div>
+      </div>
+    
+    </div>
+    <footer id="footer" style="margin-top: 50px;">
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6 footer-contact">
+                   
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning"><b>FORK & FLOURISH</b></h5>
+                    <p>Embrace the art of flavor. Savor the magic of homemade. Crafting happiness, one recipe at a time. Filling homes with kitchen joy..</p>
+                  </div>
+  
+                  <div class="col-lg-3 col-md-6 footer-links">
+                      <h4>Useful Links</h4>
+                      <ul>
+                          <li><i class="bx bx-chevron-right"></i> <a href="home.html">Home</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="about us.html">About Us</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="contact us.html">Contact Us</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="feedback.html">Feedback</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="return.html">Return policy</a></li>
+                      </ul>
+                  </div>
+  
+                  <div class="col-lg-3 col-md-6 footer-link">
+                      <h4>Our Services</h4>
+                   
+                      <p>
+                        <a href="cookware.html" class="text-white" style="text-decoration: none;">Cookware</a>
+                      </p>
+                      <p>
+                        <a href="mellamine.html" class="text-white" style="text-decoration: none;">Mellamine</a>
+                      </p>
+                      <p>
+                        <a href="cutlery.html" class="text-white" style="text-decoration: none;">Cutlery</a>
+                      </p>
+                      <p>
+                        <a href="glassware.html" class="text-white" style="text-decoration: none;">Glassware</a>
+                      </p>
+                  </div>
+  
+                  <div class="col-lg-3 col-md-6 footer-links">
+                      <h4>Our Social Network</h4>
+                     
+                      <div class="social-links mt-3">
+                        <p>
+                          <i class="fas fa-home mr-3"></i>  Karachi, PK 2333,Pakistan
+                         </p>
+               
+                         <p>
+                          <i class="fas fa-envelope mr-3"></i>  abcd@gmail.com
+                         </p>
+               
+                         <p>
+                          <i class="fas fa-phone mr-3"></i>  +92 123456789
+                         </p>
+               
+                         <p>
+                          <i class="fas fa-print mr-3"></i>  +01 335 633 77
+                         </p>
+                      </div>
+                  </div>
+  
+  
+              </div>
+             
+  
+          </div>
+      </div>
+      <div class="container py-4" id="copyright">
+          <div class="copyright">
+            <p> Copyright: All rights reserved by:
+              <a href="#" style="text-decoration: none;">
+                <strong class="text-warning">Our Team</strong>
+              </a>
+            </p>
+          </div>
+          <div class="text-center text-md-right" id="footer-bottom">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      </footer>
+    <!-- Bootstrap JS (Optional for interactive features like modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </body>
+    </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h2 id="product-title">Delicious Snack</h2>
+    <img id="product-image" src="snack.jpg" alt="Product Image">
+    <p id="product-price">Rs 150</p>
+
+    <div>
+        <button id="decrease-quantity">-</button>
+        <input id="quantity-input" type="number" value="1" min="1">
+        <button id="increase-quantity">+</button>
+    </div>
+
+    <button id="add-to-cart">Add to Cart</button>
+
+    <div>
+        <span id="cart-count">0</span>
+        <button id="cart-icon">🛒 View Cart</button>
+    </div>
+
+    <div id="cart-modal">
+        <div id="cart-items"></div>
+        <p>Total: <span id="cart-total">Rs 0</span></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Page loaded successfully!");
+
+            const productTitle = document.getElementById("product-title");
+            const productImage = document.getElementById("product-image");
+            const productPrice = document.getElementById("product-price");
+            const quantityInput = document.getElementById("quantity-input");
+            const addToCartButton = document.getElementById("add-to-cart");
+            const cartCount = document.getElementById("cart-count");
+            const cartIcon = document.getElementById("cart-icon");
+            const cartItemsContainer = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+
+            if (!productTitle || !productImage || !productPrice || !quantityInput || !addToCartButton) {
+                console.error("❌ One or more required elements are missing in the DOM.");
+                return;
+            }
+
+            let cart = [];
+
+            document.getElementById("increase-quantity").addEventListener("click", () => {
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+            });
+
+            document.getElementById("decrease-quantity").addEventListener("click", () => {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            });
+
+            addToCartButton.addEventListener("click", () => {
+                const product = {
+                    title: productTitle.textContent,
+                    image: productImage.src,
+                    price: parseFloat(productPrice.textContent.replace("Rs", "").trim()),
+                    quantity: parseInt(quantityInput.value),
+                };
+
+                if (isNaN(product.price) || product.quantity < 1) {
+                    alert("Invalid product details!");
+                    return;
+                }
+
+                const existingProduct = cart.find(item => item.title === product.title);
+                if (existingProduct) {
+                    existingProduct.quantity += product.quantity;
+                } else {
+                    cart.push(product);
+                }
+
+                updateCartUI();
+            });
+
+            function updateCartUI() {
+                cartItemsContainer.innerHTML = "";
+                let total = 0;
+
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+
+                    cartItemsContainer.innerHTML += `
+                        <div class="d-flex align-items-center p-2 border rounded mb-2">
+                            <img src="${item.image}" class="me-3" style="width: 50px; height: 50px;">
+                            <div class="flex-grow-1">
+                                <h6>${item.title}</h6>
+                                <p class="mb-0">Price: Rs ${item.price}</p>
+                                <p class="mb-0">Qty: ${item.quantity}</p>
+                            </div>
+                            <strong class="text-primary">Rs ${item.price * item.quantity}</strong>
+                        </div>
+                    `;
+                });
+
+                cartTotal.textContent = `Rs ${total}`;
+                cartCount.textContent = cart.length;
+            }
+
+            cartIcon.addEventListener("click", () => {
+                alert("Cart clicked! Implement modal display.");
+            });
+        });
+    </script>
+</body>
+</html>

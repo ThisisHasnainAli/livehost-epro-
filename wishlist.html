@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+   
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    .cartTab {
+        background-color: white;
+        color:  rgb(6, 6, 6);
+        width: 350px;
+        max-width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: -6px 0 15px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+  
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+    }
+    
+    
+    .close-btn {
+        background: rgb(24, 23, 23);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-left: auto; 
+    }
+    
+    .close-btn:hover {
+        background: black;
+    }
+    
+   
+    .cart-content {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        color: black;
+    }
+    
+    .cartTab.hidden {
+    opacity: 0;
+    visibility: hidden;
+    }
+    
+    
+    @media (max-width: 400px) {
+        .cartTab {
+            width: 100%;
+        }
+    }
+   
+
+   
+</style>
+    
+</head>
+<body>
+
+    <div class="cartTab">
+        <div class="cart-header">
+            <h1>Wishlist</h1>
+            <button class="close-btn"><a href="home.html">X</a></button>
+        </div>
+
+        <div class="cart-content">
+            <p>Your list is empty</p>
+        </div>
+
+       
+    </div>
+    <!-- <script>
+        const closeButton = document.querySelector('.close-btn');
+        const cartTab = document.querySelector('.cartTab');
+
+        // Add an event listener to the close button
+        closeButton.addEventListener('click', () => {
+        cartTab.classList.add('hidden');  // Add the 'hidden' class to hide the cart tab
+       });
+    </script> -->
+
+</body>
+</html>
